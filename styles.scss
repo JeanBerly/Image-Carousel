@@ -1,0 +1,107 @@
+*, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+#carouselImg{
+    display: block;
+    position: relative;
+    height: 91vh;
+    img{
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+    }
+    #nextImage, #previousImage{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        z-index: 999;
+        color: rgba(0, 0, 0, 0);;
+        font-size: 2rem;
+        span{
+            width: fit-content;
+            cursor: pointer;
+        }
+        &:hover{
+            color: white;
+        }
+    }
+    #nextImage{ 
+        align-items: flex-end;
+        right: 2%;
+    }
+    #previousImage{
+        left: 2%;
+    }
+}
+#mainNav{
+    display: flex;
+    position: relative;
+    align-content: center;
+    height: 9vh;
+    *{
+        margin: auto 0;
+    }
+    padding-left: 2%;
+}
+.brandName{
+    display: block;
+    white-space: nowrap;
+    height: fit-content;
+    // font-size: (clamp(15px, 20px, 10vmax));
+    font-size: calc(10px + 1vmax);
+    font-weight: 700;
+}
+#listNav{
+    display: flex;
+    position: relative;
+    margin-left: 5%;
+    width: 85%;
+    .listItem a{
+        display: block;
+        position: relative;
+        margin: 0 1%;
+        font-size: calc(5px + 1vmax);
+        color: rgba(168, 168, 168, 1);
+        font-weight: 900;
+        margin: 0 20px;
+        &:hover{
+            color: rgb(75, 75, 75);
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: currentColor;
+            left: 0;
+            bottom: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 250ms ease-in;
+        }
+        &:hover::after{
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    }
+}
+@media (max-width: 950px) {
+    #mainNav{
+        justify-content: center;
+    }
+    .brandName{
+        font-size: 25px;
+    }
+    #listNav{
+        display: none;
+    }
+}
