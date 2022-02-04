@@ -19,9 +19,12 @@ const IMAGES = {
 const numImages = Object.getOwnPropertyNames(IMAGES).length;
 // separates the img and index
 function separateString(selectedImg){
-    let imgSrc = selectedImg.substring(0, (selectedImg.length - 1));
-    let index = parseInt(selectedImg.substring((selectedImg.length - 1)));
+    let index = parseInt(selectedImg.split('img')[1]);
+    let imgSrc = '';
+    if (index < 10) imgSrc = selectedImg.substring(0, (selectedImg.length - 1));
+    else imgSrc = selectedImg.substring(0, (selectedImg.length - 2));
     let newString = [imgSrc, index];
+    console.log(newString);
     return newString;
 }
 function nextImage(selectedImg){
