@@ -2,9 +2,9 @@ import Image from 'next/image';
 import React from 'react';
 import { Router, useRouter } from 'next/router';
 const IMAGES = {
-    img1: require('../public/houses/houses1.jpg'),
-    img2: require('../public/houses/houses2.jpg'),
-    img3: require('../public/houses/houses3.jpg'),
+    img1: require('../public/houses1.jpg'),
+    img2: require('../public/houses2.jpg'),
+    img3: require('../public/houses3.jpg'),
 }
 const numImages = Object.getOwnPropertyNames(IMAGES).length;
 // separates the img and index
