@@ -2,10 +2,9 @@ import Image from 'next/image';
 import React from 'react';
 import { Router, useRouter } from 'next/router';
 const IMAGES = {
-    img1: require('../public/img1.jpg'),
-    img2: require('../public/img2.jpg'),
-    img3: require('../public/img3.jpg'),
-    img4: require('../public/img4.jpg'),
+    img1: require('../public/technology/technology1.jpg'),
+    img2: require('../public/technology/technology2.jpg'),
+    img3: require('../public/technology/technology3.jpg'),
 }
 const numImages = Object.getOwnPropertyNames(IMAGES).length;
 // separates the img and index
@@ -29,7 +28,7 @@ function previousImage(selectedImg){
     let newImg = imgSrc + index;
     return newImg;
 }
-function HomePage() {
+function technologyPage() {
     const [selectedImage, setSelectedImage] = React.useState('img1');
     const router = useRouter();
     return (
@@ -79,4 +78,4 @@ function HomePage() {
     )
 }
 
-export default HomePage
+export default technologyPage

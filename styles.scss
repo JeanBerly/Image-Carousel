@@ -56,7 +56,6 @@ a{
     display: block;
     white-space: nowrap;
     height: fit-content;
-    // font-size: (clamp(15px, 20px, 10vmax));
     font-size: calc(10px + 1vmax);
     font-weight: 700;
 }
@@ -99,7 +98,7 @@ a{
         justify-content: center;
     }
     .brandName{
-        font-size: 25px;
+        font-size: calc(8px + 1vmax);
     }
     #listNav{
         display: none;

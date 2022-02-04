@@ -144,7 +144,7 @@ a {
             justify-content: center;
   }
   .brandName {
-    font-size: 25px;
+    font-size: calc(8px + 1vmax);
   }
   #listNav {
     display: none;
