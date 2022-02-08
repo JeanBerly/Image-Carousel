@@ -13,3 +13,4 @@ a personal project.
 <h3>Improvements to be made:</h3>
 Make a component that will render most of the page so the source code of each
 page doesn't repeat itself to much.
+Create a button to open navigation bar in mobile devices.
